@@ -69,20 +69,6 @@ def signup():
         else:
             return render_template('signup.html')
 
-# @app.route('/signup/',methods=['POST','GET'])
-# def signup():
-#         if request.method=='POST':
-#             email=request.form['email']
-#             password=request.form['password']
-#             roll=request.form.get('roll')
-#             name=request.form.get('name')
-#             sql="insert into voter_details(roll_no,full_name,email,passwd) values('{}','{}','{}','{}')".format(roll,name,email,password)   
-#             cursor.execute(sql)
-#             con.commit()
-#             return render_template('login.html')
-#         else:
-#             return render_template('signup.html')
-
 @app.route('/add_candidate/',methods=['POST','GET'])
 def add_candidate():
     if request.method=='POST':
